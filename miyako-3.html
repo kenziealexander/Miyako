@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Miyako | Alat rumah yang tenang dan awet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF1EC;--mist:#DCE4DB;--card:#FAFBF9;--deep:#1F2A24;--green:#2E5E46;--mute:#59665E;--line:#C9D3CA;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--deep);font-family:'Figtree',system-ui,sans-serif;font-size:1.0625rem;line-height:1.6}
+h1,h2,h3{font-family:'Zen Maru Gothic',system-ui,sans-serif;font-weight:700;line-height:1.18;letter-spacing:-.01em;text-wrap:balance}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+svg.art{display:block;width:100%;height:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.sec{padding:112px 0}
+.h2{font-size:clamp(1.8rem,3.4vw,2.7rem);max-width:20ch}
+.sub{color:var(--mute);margin-top:14px;max-width:48ch}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:0 28px;border-radius:999px;background:var(--green);color:#fff;font-weight:600;transition:background .2s}
+.btn:hover{background:var(--deep)}
+.link{font-weight:600;color:var(--green);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
+.acts{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.nav{position:sticky;top:calc(10px + env(safe-area-inset-top,0px));z-index:5;margin:10px auto 0;max-width:1112px;width:calc(100% - 32px);background:rgba(250,251,249,.9);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px}
+.nav .in{display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 10px 0 26px}
+.logo{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:1.35rem;color:var(--green)}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:.95rem;color:var(--mute)}
+.nav ul a:hover{color:var(--deep)}
+.nav .btn{min-height:42px;padding:0 20px;font-size:.95rem}
+/* 1 hero centered */
+.hero{text-align:center;padding:88px 0 40px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.6rem)}
+.hero p{color:var(--mute);margin:22px auto 0;max-width:38ch;font-size:1.12rem}
+.hero .acts{justify-content:center;margin-top:34px}
+.shelf{margin:64px auto 0;max-width:980px;background:var(--mist);border-radius:40px;padding:36px 36px 0;display:grid;grid-template-columns:repeat(3,1fr);align-items:end}
+.shelf svg{width:100%;height:auto;display:block}
+.rise{opacity:0;transform:translateY(16px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:var(--d,0s)}
+@keyframes rise{to{opacity:1;transform:none}}
+/* 2 arches */
+.arches{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+.arch .ph{aspect-ratio:3/4;background:var(--mist);border-radius:999px 999px 28px 28px;padding:12% 12% 0;display:flex;align-items:flex-end}
+.arch h3{font-size:1.35rem;margin-top:20px}
+.arch p{color:var(--mute);margin-top:4px;font-size:.98rem}
+/* 3 sticky */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.stk{position:sticky;top:calc(110px + env(safe-area-inset-top,0px));background:var(--mist);border-radius:36px;aspect-ratio:1;padding:12%}
+.blocks>div{min-height:46vh;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line);padding:32px 0}
+.blocks>div:last-child{border:0}
+.blocks h3{font-size:1.7rem}
+.blocks p{color:var(--mute);margin-top:12px;max-width:40ch}
+/* 4 benefit strip */
+.strip{background:var(--deep);color:#EEF1EC}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:56px 28px;border-left:1px solid #3B4A41}
+.strip div:first-child{border-left:0;padding-left:0}
+.strip h3{font-size:1.25rem}
+.strip p{color:#B9C5BC;font-size:.97rem;margin-top:8px}
+/* 5 tabs */
+.tabs{margin-top:48px;position:relative}
+.tabs input{position:absolute;opacity:0;pointer-events:none}
+.tl{display:flex;gap:10px;flex-wrap:wrap}
+.tl label{cursor:pointer;padding:10px 22px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-weight:600;font-size:.97rem}
+#ta:checked~.tl [for=ta],#tb:checked~.tl [for=tb],#tc:checked~.tl [for=tc]{background:var(--green);border-color:var(--green);color:#fff}
+#ta:focus-visible~.tl [for=ta],#tb:focus-visible~.tl [for=tb],#tc:focus-visible~.tl [for=tc]{outline:2px solid var(--green);outline-offset:3px}
+.pn{display:none;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;margin-top:28px;background:var(--card);border-radius:36px;padding:40px}
+#ta:checked~.pa,#tb:checked~.pb,#tc:checked~.pc{display:grid}
+.pn .ph{background:var(--mist);border-radius:26px;aspect-ratio:1;padding:10%}
+.pn h3{font-size:1.8rem}
+.pn dl{margin-top:22px;border-top:1px solid var(--line)}
+.pn dl div{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line)}
+.pn dt{color:var(--mute)}.pn dd{font-weight:600}
+/* 6 asymmetric quote */
+.qt{display:grid;grid-template-columns:.8fr 1.5fr;gap:64px;align-items:center}
+.qt blockquote{font-family:'Zen Maru Gothic',sans-serif;font-weight:500;font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.38}
+.qt cite{display:block;margin-top:24px;font-style:normal;color:var(--mute);font-size:.97rem}
+/* 7 q&a grid */
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.qa div{background:var(--card);border-radius:24px;padding:32px}
+.qa h3{font-size:1.2rem}
+.qa p{color:var(--mute);margin-top:10px;font-size:.98rem}
+/* 8 pills */
+.pills{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.pills a{padding:18px 32px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:1.25rem;transition:background .2s,color .2s}
+.pills a:hover{background:var(--green);color:#fff;border-color:var(--green)}
+/* 9 cta panel */
+.panel{background:var(--green);color:#fff;border-radius:44px;padding:88px 40px;text-align:center}
+.panel h2{font-size:clamp(2rem,4.2vw,3.3rem);max-width:16ch;margin:0 auto}
+.panel p{color:#D3E2D8;margin:16px auto 0;max-width:40ch}
+.panel .acts{justify-content:center;margin-top:32px}
+.panel .btn{background:#fff;color:var(--deep)}
+.panel .btn:hover{background:var(--mist)}
+footer{padding:56px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:var(--mute);font-size:.93rem}
+footer ul{list-style:none;display:flex;gap:24px;flex-wrap:wrap}
+@media(max-width:860px){
+.sec{padding:80px 0}.nav ul{display:none}.nav .in{padding-left:20px}
+.hero{padding-top:56px}.shelf{padding:20px 14px 0;border-radius:28px}
+.arches{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}
+.story{grid-template-columns:1fr;gap:32px}.stk{position:static;max-width:380px;margin:0 auto;width:100%}
+.blocks>div{min-height:0}
+.strip .wrap{grid-template-columns:1fr 1fr}.strip div,.strip div:first-child{padding:36px 20px;border-left:0}
+.pn{grid-template-columns:1fr;padding:24px;gap:28px}
+.qt{grid-template-columns:1fr;gap:24px}.qa{grid-template-columns:1fr}
+.panel{padding:64px 24px;border-radius:32px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rise{animation:none;opacity:1;transform:none}.btn,.pills a{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="rice" viewBox="0 0 200 200"><ellipse cx="100" cy="176" rx="64" ry="6" fill="#B8C4BA"/><rect x="44" y="84" width="112" height="92" rx="28" fill="#FAFBF9"/><path d="M50 92a50 40 0 0 1 100 0z" fill="#E3E9E2"/><circle cx="100" cy="48" r="6" fill="#2E5E46"/><rect x="78" y="126" width="44" height="16" rx="8" fill="#DCE4DB"/><circle cx="100" cy="158" r="5" fill="#2E5E46"/></symbol>
+<symbol id="blend" viewBox="0 0 200 200"><ellipse cx="100" cy="180" rx="54" ry="6" fill="#B8C4BA"/><path d="M68 34h64l-7 96H75z" fill="#F1F5F0" stroke="#B8C4BA" stroke-width="2"/><path d="M80 108h40l-3 22H83z" fill="#D2DDD3"/><rect x="62" y="24" width="76" height="12" rx="6" fill="#2E5E46"/><rect x="58" y="130" width="84" height="50" rx="14" fill="#1F2A24"/><circle cx="100" cy="155" r="7" fill="#FAFBF9"/></symbol>
+<symbol id="fan" viewBox="0 0 200 200"><ellipse cx="100" cy="182" rx="38" ry="6" fill="#B8C4BA"/><circle cx="100" cy="74" r="50" fill="#F1F5F0" stroke="#1F2A24" stroke-width="2.5"/><g fill="#C7D1C8"><ellipse cx="100" cy="50" rx="11" ry="22"/><ellipse cx="100" cy="50" rx="11" ry="22" transform="rotate(120 100 74)"/><ellipse cx="100" cy="50" rx="11" ry="22" transform="rotate(240 100 74)"/></g><circle cx="100" cy="74" r="8" fill="#2E5E46"/><rect x="97" y="124" width="6" height="54" fill="#1F2A24"/><rect x="64" y="174" width="72" height="9" rx="4.5" fill="#1F2A24"/></symbol>
+</defs></svg>
+
+<header class="nav"><div class="in">
+<a href="#" class="logo">Miyako</a>
+<nav aria-label="Utama"><ul><li><a href="#produk">Produk</a></li><li><a href="#cerita">Kualitas</a></li><li><a href="#model">Model</a></li><li><a href="#bantuan">Bantuan</a></li></ul></nav>
+<a href="#toko" class="btn">Cari toko</a>
+</div></header>
+
+<main>
+<section class="wrap hero">
+<h1 class="rise">Alat rumah yang<br>tenang dan awet.</h1>
+<p class="rise" style="--d:.12s">Rice cooker, blender, kipas angin, dan lainnya, dirancang sederhana agar nyaman dipakai bertahun-tahun.</p>
+<div class="acts rise" style="--d:.24s"><a href="#produk" class="btn">Lihat produk</a><a href="#toko" class="link">Cari toko terdekat</a></div>
+<div class="shelf rise" style="--d:.34s" role="img" aria-label="Blender, rice cooker, dan kipas angin Miyako berjajar"><svg viewBox="0 0 200 200"><use href="#blend"/></svg><svg viewBox="0 0 200 200"><use href="#rice"/></svg><svg viewBox="0 0 200 200"><use href="#fan"/></svg></div>
+</section>
+
+<section class="sec" id="produk"><div class="wrap">
+<h2 class="h2">Tiga alat yang paling sering Anda sentuh.</h2>
+<p class="sub">Bentuknya sederhana, bahannya kuat, dan hasilnya konsisten setiap hari.</p>
+<div class="arches">
+<article class="arch"><div class="ph"><svg class="art" viewBox="0 0 200 200" role="img" aria-label="Rice cooker"><use href="#rice"/></svg></div><h3>Rice cooker</h3><p>Nasi matang merata dan tetap hangat.</p></article>
+<article class="arch"><div class="ph"><svg class="art" viewBox="0 0 200 200" role="img" aria-label="Blender"><use href="#blend"/></svg></div><h3>Blender</h3><p>Motor kuat, suara yang tetap tenang.</p></article>
+<article class="arch"><div class="ph"><svg class="art" viewBox="0 0 200 200" role="img" aria-label="Kipas angin"><use href="#fan"/></svg></div><h3>Kipas angin</h3><p>Angin merata ke seluruh ruangan.</p></article>
+</div>
+</div></section>
+
+<section class="sec" id="cerita" style="padding-top:24px"><div class="wrap story">
+<div class="stk"><svg class="art" viewBox="0 0 200 200" role="img" aria-label="Rice cooker Miyako"><use href="#rice"/></svg></div>
+<div class="blocks">
+<div><h3>Panas yang diatur sendiri.</h3><p>Sensor menjaga suhu tetap pas sehingga nasi tidak lembek dan tidak gosong.</p></div>
+<div><h3>Panci yang mudah dibersihkan.</h3><p>Lapisan anti lengket merata, cukup dibilas dengan spons lembut.</p></div>
+<div><h3>Tutup yang menahan uap.</h3><p>Rapat dan stabil, jadi rasa nasi terjaga sampai porsi terakhir.</p></div>
+</div>
+</div></section>
+
+<section class="strip"><div class="wrap">
+<div><h3>Bahan kuat</h3><p>Dipilih untuk tahan panas dan pemakaian harian.</p></div>
+<div><h3>Rakitan rapat</h3><p>Sambungan presisi, alat tidak berisik.</p></div>
+<div><h3>Diuji tiap unit</h3><p>Dinyalakan dan dicek sebelum dikemas.</p></div>
+<div><h3>Garansi resmi</h3><p>Servis dan suku cadang mudah didapat.</p></div>
+</div></section>
+
+<section class="sec" id="model"><div class="wrap">
+<h2 class="h2">Pilih model, lihat angkanya.</h2>
+<div class="tabs">
+<input type="radio" name="t" id="ta" checked aria-label="Rice cooker"><input type="radio" name="t" id="tb" aria-label="Blender"><input type="radio" name="t" id="tc" aria-label="Kipas angin">
+<div class="tl"><label for="ta">Rice cooker</label><label for="tb">Blender</label><label for="tc">Kipas angin</label></div>
+<div class="pn pa"><div class="ph"><svg class="art" viewBox="0 0 200 200" role="img" aria-label="Rice cooker"><use href="#rice"/></svg></div><div><h3>Rice cooker 1,8 L</h3><dl><div><dt>Kapasitas</dt><dd>1,8 liter</dd></div><div><dt>Daya</dt><dd>700 W</dd></div><div><dt>Mode hangat</dt><dd>12 jam</dd></div><div><dt>Garansi</dt><dd>1 tahun</dd></div></dl></div></div>
+<div class="pn pb"><div class="ph"><svg class="art" viewBox="0 0 200 200" role="img" aria-label="Blender"><use href="#blend"/></svg></div><div><h3>Blender 2 L</h3><dl><div><dt>Kapasitas</dt><dd>2 liter</dd></div><div><dt>Daya</dt><dd>400 W</dd></div><div><dt>Pisau</dt><dd>Stainless 4 mata</dd></div><div><dt>Garansi</dt><dd>1 tahun</dd></div></dl></div></div>
+<div class="pn pc"><div class="ph"><svg class="art" viewBox="0 0 200 200" role="img" aria-label="Kipas angin"><use href="#fan"/></svg></div><div><h3>Kipas angin 16 inci</h3><dl><div><dt>Kecepatan</dt><dd>3 tingkat</dd></div><div><dt>Daya</dt><dd>45 W</dd></div><div><dt>Tiang</dt><dd>Bisa diatur</dd></div><div><dt>Garansi</dt><dd>1 tahun</dd></div></dl></div></div>
+</div>
+</div></section>
+
+<section class="sec" style="padding-top:24px"><div class="wrap qt">
+<p class="sub" style="margin:0;font-size:1.05rem">Dari pengguna Miyako</p>
+<div><blockquote>Tiga tahun dipakai tiap hari, rasanya masih seperti hari pertama.</blockquote><cite>Rina, Bekasi</cite></div>
+</div></section>
+
+<section class="sec" id="bantuan" style="padding-top:24px"><div class="wrap">
+<h2 class="h2">Hal yang sering ditanyakan.</h2>
+<div class="qa">
+<div><h3>Bagaimana klaim garansi?</h3><p>Bawa produk dan kartu garansi ke service center resmi, atau hubungi kami untuk panduan pengiriman.</p></div>
+<div><h3>Di mana beli suku cadang?</h3><p>Panci, gelas blender, dan aksesori ada di toko resmi dan service center.</p></div>
+<div><h3>Aman dipakai tiap hari?</h3><p>Ya. Semua alat dirancang untuk rumah tangga dengan pelindung panas berlebih.</p></div>
+<div><h3>Cara merawat rice cooker?</h3><p>Cabut kabel, dinginkan, cuci panci dengan spons lembut, dan jangan rendam bodi utama.</p></div>
+</div>
+</div></section>
+
+<section class="sec" id="toko" style="padding-top:24px"><div class="wrap">
+<h2 class="h2">Beli lewat jalur resmi.</h2>
+<p class="sub">Pilih yang paling dekat dengan Anda.</p>
+<div class="pills"><a href="#">Toko resmi Miyako</a><a href="#">Marketplace resmi</a><a href="#">Service center</a><a href="#">Hubungi kami</a></div>
+</div></section>
+
+<section class="wrap" style="padding-bottom:32px"><div class="panel">
+<h2>Siap membawa pulang yang awet?</h2>
+<p>Temukan toko terdekat atau tanyakan stok langsung ke tim kami.</p>
+<div class="acts"><a href="#" class="btn">Cari toko</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<span>2026 PT Miyako</span>
+<ul><li>Garansi</li><li>Service center</li><li>Karier</li><li>Kontak media</li></ul>
+</div></footer>
+</body>
+</html>
